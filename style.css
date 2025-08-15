@@ -1,17 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+:root {
+  --primary-color: #add8e6; /* orange */
+  --background-color: black; /* blue */
+  --secondary-color: #a8b0bc; /* light gray */
+}
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: black;
 }
 
 #tentacles {
     width: 50px;
 }
 
+h2{
+    color: #86C5DA;
+    text-align: center;
+}
+
+body p {
+    font-family: 'Cabin';
+    color: white;
+    text-align: center;
+}
+
 .header {
     display: flex;
-    background-color: lightblue;
+    justify-content: center;
+    background-color: #86C5DA;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -21,19 +39,26 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #86C5DA;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    color: white;
 }
 
-#num-contributions, #total-raised, #num-games {
+#total-raised, #num-games {
     font-size: 50px;
+}
+
+#num-contributions {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
 }
 
 #games-container {
@@ -45,7 +70,7 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 5px #000000;
 }
 
 .game-card {
@@ -55,11 +80,21 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    color: black;
+    transition: transform 0.35s ease;
 }
 
+.game-card h2 {
+    color: black;
+}
+.game-card p {
+    color: black;
+}
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform: scale(1.05);
+    z-index: 10;
 }
 
 #button-container {
@@ -69,7 +104,110 @@ body {
 button {
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+    padding: 1.5%;
+    margin: 2%;
+    border-radius: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.35s ease;
+    font-weight: bold;
+    border: #FFFFFF solid 0.5px;
 }
+button:hover {
+    box-shadow: 0 0 10px #FFFFFF;
+    transform: scale(1.025);
+}
+
+#funded-btn {
+    background-color: #66B6D0;
+    color: white;
+}
+#unfunded-btn {
+    background-color: black;
+    color: white;
+}
+#all-btn {
+    background: linear-gradient(to top, #66B6D0 50%, black 50%);
+    color: white;
+    
+}
+
+.gameStats {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 8px;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.356);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.search-input-container img{
+    max-width: 20%;
+    min-width: 20%;
+    height: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 0.4%;
+   
+}
+
+.search-input-container input {
+    font-family: 'Cabin';
+    font-size: xx-large;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 188%;
+    height: 60%;
+    margin-left: -95px;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+nav{
+    display: flex;
+    background-color: #86C5DA;
+    padding: 1%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+nav a{
+    color: #000000;
+    text-decoration: none;
+    transition: transform 0.35s ease;
+    padding: 8px;
+    border-radius: 15px;
+    font-size: large;
+
+}
+
+nav a:hover{
+    text-decoration: none;
+    border-radius: 13px;
+    background-color: #5d5d5d3e;
+}
+
+.logo{
+    margin: 0 auto;
+    flex-direction: row;
+    display: flex; 
+    align-items: center;
+}
+
